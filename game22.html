@@ -9,14 +9,14 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f8ff; /* Light blue background */
+            background-color: #f0f8ff; 
             margin: 0;
             padding: 20px;
             text-align: center;
         }
 
         h1 {
-            color: #008080; /* Teal heading color */
+            color: #008080; 
         }
 
         p {
@@ -30,7 +30,7 @@
             background-color: #add8e6;
             margin: 20px auto;
             position: relative;
-            overflow: hidden; /* To contain the absolute-positioned elements */
+            overflow: hidden; 
         }
 
         .tank-item {
@@ -41,7 +41,7 @@
 
         #fish {
             font-size: 36px;
-            animation: swim 2s infinite alternate; /* Fish animation */
+            animation: swim 2s infinite alternate;
         }
 
         @keyframes swim {
@@ -52,21 +52,21 @@
         #score {
             font-size: 20px;
             margin-top: 10px;
-            color: #008080; /* Teal text color */
+            color: #008080; 
         }
 
         #miniGameContainer {
             margin-top: 20px;
             display: flex;
-            flex-wrap: wrap; /* Allow mini-games to wrap on smaller screens */
+            flex-wrap: wrap; 
             justify-content: center;
         }
 
         .miniGame {
-            flex: 1; /* Make mini-games take equal width */
+            flex: 1; 
             margin: 0 10px 20px;
             padding: 20px;
-            background-color: #f0f8ff; /* Light blue background */
+            background-color: #f0f8ff; 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
@@ -75,7 +75,7 @@
 
         .ticTacToeCell:hover,
         .wordSearchCell:hover {
-            background-color: #d3d3d3; /* Hover effect */
+            background-color: #d3d3d3; 
         }
 
         #ticTacToeBoard {
@@ -103,7 +103,7 @@
             gap: 5px;
             margin-top: 10px;
             margin-top: 10px; 
-            max-width: 320px; /* Adjust the maximum width as needed */
+            max-width: 320px; 
             margin: 0 
         }
 
@@ -128,7 +128,7 @@
         .wordListContainer {
             margin-top: 10px;
             padding: 10px;
-            background-color: #f0f8ff; /* Light blue background */
+            background-color: #f0f8ff; 
             border-radius: 10px;
         }
 
@@ -138,7 +138,7 @@
 
         @media (max-width: 600px) {
             .miniGame {
-                flex: 100%; /* Make mini-games full width on smaller screens */
+                flex: 100%;
             }
         }
     </style>
@@ -150,12 +150,10 @@
     <p>Build your own aquarium and play mini-games to earn points.</p>
 
     <div id="aquarium" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <!-- Add fish element here -->
         <div id="fish" class="tank-item" draggable="true" ondragstart="drag(event)"
             style="left: 50%; top: 50%; transform: translate(-50%, -70%);">🐟</div>
 
 
-        <!-- Example tank items -->
         <div class="tank-item" id="item1" draggable="true" ondragstart="drag(event)" style="left: 100px; top: 230px;">🐌
         </div>
         <div class="tank-item" id="item3" draggable="true" ondragstart="drag(event)" style="left: 200px; top: 230px;">🐙
@@ -198,14 +196,13 @@
             pointsElement.textContent = points;
         }
 
-        // Aquarium building logic
         const aquarium = document.getElementById("aquarium");
-        const fish = document.getElementById("fish"); // Get the fish element
-        aquarium.appendChild(fish); // Append the fish to the aquarium
+        const fish = document.getElementById("fish"); 
+        aquarium.appendChild(fish);
 
         const sand = document.getElementById("sand");
         aquarium.appendChild(sand);
-        // Drag and drop logic for tank items
+        
         function allowDrop(event) {
             event.preventDefault();
         }
@@ -247,7 +244,7 @@
 
                 if (checkWin()) {
                     alert(`Player ${currentPlayer} wins!`);
-                    updatePoints(3); // Adjust points as needed
+                    updatePoints(3); 
                     resetTicTacToe();
                 } else if (gameBoard.every((cell) => cell !== "")) {
                     alert("It's a draw!");
@@ -255,7 +252,7 @@
                 } else {
                     currentPlayer = currentPlayer === "X" ? "O" : "X";
                     if (currentPlayer === "O") {
-                        // Automatically make a move for the computer after player's move
+                
                         makeComputerMove();
                     }
                 }
@@ -281,27 +278,26 @@
         }
 
         function makeComputerMove() {
-            // Improved logic for computer's move
+       
             const emptyCells = ticTacToeCells.filter(cell => gameBoard[cell] === "");
 
-            // Check if the computer can win
             for (let i = 0; i < emptyCells.length; i++) {
                 const testMove = emptyCells[i];
                 gameBoard[testMove] = currentPlayer;
                 if (checkWin()) {
                     document.querySelector(`#ticTacToeBoard div:nth-child(${testMove + 1})`).textContent = currentPlayer;
                     alert("Computer wins!");
-                    updatePoints(3); // Adjust points as needed
+                    updatePoints(3); 
                     resetTicTacToe();
                     return;
                 }
                 gameBoard[testMove] = "";
             }
 
-            // Check if the player is about to win and block
+     ==
             for (let i = 0; i < emptyCells.length; i++) {
                 const testMove = emptyCells[i];
-                gameBoard[testMove] = "X"; // Assume the player's move
+                gameBoard[testMove] = "X"; 
                 if (checkWin()) {
                     gameBoard[testMove] = currentPlayer;
                     document.querySelector(`#ticTacToeBoard div:nth-child(${testMove + 1})`).textContent = currentPlayer;
@@ -310,11 +306,11 @@
                 gameBoard[testMove] = "";
             }
 
-            // If no winning moves, make a random move
+
             const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
 
             if (randomCell !== undefined) {
-                setTimeout(() => handleTicTacToeMove(randomCell), 1000); // Delay for a better user experience
+                setTimeout(() => handleTicTacToeMove(randomCell), 1000); 
             }
         }
 
@@ -339,15 +335,14 @@ wordList.forEach(word => {
     wordListContainer.appendChild(wordListItem);
 });
 
-// Word Search grid generation
 wordSearchGrid.forEach((row, rowIndex) => {
     const rowElement = document.createElement("div");
     rowElement.className = "wordSearchRow";
     row.forEach((letter, columnIndex) => {
         const cellElement = document.createElement("div");
         cellElement.className = "wordSearchCell";
-        cellElement.textContent = letter;  // Use textContent instead of innerText
-        // Mark the starting position of each word
+        cellElement.textContent = letter;  
+
         if (
             row.slice(columnIndex, columnIndex + wordList[rowIndex].length).join("") ===
             wordList[rowIndex]
@@ -359,12 +354,10 @@ wordSearchGrid.forEach((row, rowIndex) => {
     wordSearchGame.appendChild(rowElement);
 });
 
-// Attach click event listener to individual cells
 document.querySelectorAll(".wordSearchCell").forEach(cell => {
     cell.addEventListener("click", handleWordSearchClick);
 });
 
-// Declare and initialize the selectedCells set
 const selectedCells = new Set();
 
 function handleWordSearchClick(event) {
@@ -376,11 +369,9 @@ function handleWordSearchClick(event) {
 
     if (clickedCell.classList.contains("wordStart")) {
         if (selectedCells.has(cellKey)) {
-            // Deselect the cell
             selectedCells.delete(cellKey);
             clickedCell.classList.remove("selected");
         } else {
-            // Select the cell
             selectedCells.add(cellKey);
             clickedCell.classList.add("selected");
         }
@@ -391,17 +382,14 @@ function handleWordSearchClick(event) {
                 updatePoints(5);
                 alert(`Found word: ${selectedWord}!`);
 
-                // Remove the found word from the word list
                 const wordIndex = wordList.indexOf(selectedWord);
                 if (wordIndex !== -1) {
                     wordList.splice(wordIndex, 1);
-                    updateWordList(); // Update the displayed word list
+                    updateWordList(); 
                 }
 
-                // Check if all words are found
                 if (wordList.length === 0) {
                     alert("Congratulations! You've found all the words!");
-                    // You can add additional logic or actions when all words are found
                 }
             } else {
                 alert("Incorrect word. Try again!");
@@ -427,7 +415,6 @@ function getSelectedWord() {
     let word = '';
     sortedCells.forEach(cellKey => {
         const [rowIndex, cellIndex] = cellKey.split('-').map(Number);
-        // Adjust for 1-based indices in wordSearchGrid
         word += wordSearchGrid[rowIndex][cellIndex - 1];
     });
 
@@ -444,10 +431,8 @@ function clearSelection() {
 }
 
 function updateWordList() {
-    // Clear the current word list display
     wordListContainer.innerHTML = "";
 
-    // Update the word list display with the updated list
     wordList.forEach(word => {
         const wordListItem = document.createElement("div");
         wordListItem.className = "wordListItem";
