@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff; 
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+            transition: background 0.5s; 
+        }
+
+        header, nav, footer {
+            background-color: #35AFC3; 
+            color: #fff; 
+        }
+
+        header {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 300;
+            font-size: 30px;
+            padding: 0;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #fff; 
+        }
+
+        nav a:hover {
+            color: #267c8e; 
+        }
+
+        .section-container {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
+
+        section {
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            color: #333;
+            text-align: justify;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #35AFC3; 
+        }
+
+        .read-more-btn {
+            font-family: 'Poppins', sans-serif;
+            background-color: #35AFC3; 
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            border-top: 1px solid #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h1 {
+          margin: 0;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="siteTitle">Clear Currents</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="learnmore.html">Learn More</a>
+        <a href="donate.html">Donations</a>
+    </nav>
+   
+    <div class="section-container">
+        <section>
+            <h2>Sustainable Development Goal 6</h2>
+            <p>
+                The Water Sustainable Development Goal (SDG), Goal 6, endeavors to secure universal access to safe and affordable drinking water and sanitation by 2030. This goal acknowledges water's pivotal role in sustainable development, addressing issues ranging from poverty eradication to health improvement, gender equality, and environmental sustainability.
+            </p>
+            <p class="hidden">
+                By targeting water scarcity, quality, and ecosystem protection, Goal 6 seeks to integrate water considerations into decision-making processes and promote international cooperation. Its importance lies in recognizing water access as a fundamental human right, essential for public health, environmental sustainability, gender equality, poverty alleviation, and fostering global collaboration. Success in achieving Goal 6 contributes not only to improved well-being and dignity but also to a more resilient and equitable global community, where clean water is a shared resource for current and future generations.
+            </p>
+            <button class="read-more-btn" onclick="toggleText(this, 'read-more-btn')">Read More</button>
+        </section>
+
+        <section>
+            <h2>Indigenous Communities and Water Society</h2>
+            <p>
+                The persistent drinking water advisories in numerous First Nations communities across Canada represent a serious violation of the UN-recognized human rights to water and sanitation.
+            </p>
+            <p class="hidden">
+                Despite some advancements, 28 long-term advisories endure on reserves, with certain issues persisting for over 25 years, compounded by a $138 million annual deficit for system maintenance. Unfortunately, the government's endorsement of public-private partnerships as a solution raises concerns due to historical evidence indicating increased costs, water privatization, and a loss of community control and jobs. The Council of Canadians advocates for universal access to safe, clean water, emphasizing Indigenous peoples' right to self-governance. Recognizing the pivotal connection between water control and reconciliation, in line with the UN Declaration of the Rights of Indigenous Peoples, is crucial for permanently ending drinking water advisories in First Nations. Granting greater empowerment to First Nations in water management stands as a foundational step toward overcoming these challenges and ensuring enduring water security.
+            </p>
+            <button class="read-more-btn" onclick="toggleText(this, 'read-more-btn')">Read More</button>
+        </section>
+
+        <section>
+            <h2>Importance of Water Security</h2>
+            <p>
+                Water security is paramount for the well-being of individuals and communities, serving as a linchpin for various aspects of life. Ensuring access to clean and safe water sources not only safeguards public health by preventing waterborne diseases but also fosters environmental sustainability and promotes economic development.
+            </p>
+            <p class="hidden">
+                Communities with reliable water sources experience improved sanitation, reduced infant mortality rates, and enhanced overall health. Moreover, water security plays a pivotal role in supporting agriculture, industry, and ecosystems, contributing to food security and biodiversity preservation. Two noteworthy facts underscore the significance of water security: first, over 2 billion people globally lack access to safe drinking water, emphasizing the urgency of addressing water-related challenges. Second, sustainable water management is intricately linked to climate change adaptation, making it a cornerstone for building resilient societies in the face of environmental uncertainties. Prioritizing water security is not only a fundamental human right but a strategic imperative for building healthier, more sustainable, and resilient communities worldwide.
+            </p>
+            <button class="read-more-btn" onclick="toggleText(this, 'read-more-btn')">Read More</button>
+        </section>
+
+        <section>
+            <h2>How does Water Insecurity Manifest</h2>
+            <p>
+                Water insecurity manifests in multifaceted ways, posing a threat to communities worldwide. Pollution, stemming from industrial discharges, agricultural runoff, and improper waste disposal, contaminates water sources and jeopardizes public health. Oil spills, often resulting from industrial accidents or maritime incidents, introduce toxic substances that disrupt aquatic ecosystems, impacting both marine life and the quality of drinking water.
+            </p>
+            <p class="hidden">
+                Inadequate infrastructure exacerbates the problem, leading to water shortages, unequal distribution, and sanitation challenges. Climate change-induced droughts and floods further strain water resources, creating a precarious imbalance. Additionally, over-extraction of groundwater and inefficient water management contribute to scarcity. Addressing water insecurity requires holistic solutions, encompassing pollution control, sustainable infrastructure development, and resilient climate adaptation measures.
+            </p>
+            <button class="read-more-btn" onclick="toggleText(this, 'read-more-btn')">Read More</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clear Currents. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleText(button, className) {
+            const text = button.previousElementSibling;
+            text.classList.toggle('hidden');
+            button.innerText = text.classList.contains('hidden') ? 'Read More' : 'Read Less';
+            button.classList.toggle(className); // Add or remove the 'read-more-btn' class
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

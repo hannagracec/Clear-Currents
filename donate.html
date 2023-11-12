@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Our Non-Profit Organization</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+            transition: background 0.5s;
+        }
+
+        .donate-box {
+            background: linear-gradient(to bottom, #89D3EB, #35AFC3); 
+            color: rgb(255, 255, 255 );
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            background-color: #35AFC3;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #35AFC3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+              color: #267c8e; 
+        }
+
+        .why-donate-box {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-donate {
+            font-size: 20px;
+            margin-top: 5px;
+            line-height: 1.5; 
+        }
+
+        section {
+            padding: 10px;
+            text-align: center;
+            transition: background 0.5s;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #35AFC3;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            border-top: 1px solid #fff;
+            margin: 0 auto;
+        }
+
+        .donate-button {
+            background-color: #35AFC3; 
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            display: inline-block;
+        }
+
+        .donate-button, .learn-more-button {
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            padding: 15px 30px;
+            border-radius: 5px;
+            color: #fff; 
+            background-color: #35AFC3; 
+            border: none;
+            font-size: 18px;
+        }
+
+        .donate-button:hover, .learn-more-button:hover {
+            color: #267c8e; 
+        }
+
+        .nav-line {
+            border-bottom: 2px solid white;
+            margin-top: -5px;
+            margin-bottom: 10px;
+        }
+
+        .thank-you {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        h1 {
+          margin: 0;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Clear Currents</h1>
+        
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="learnmore.html">Learn More</a> 
+        <a href="donate.html">Donations</a>
+    </nav>
+
+    <div class="donate-box">
+        <button class="donate-button" onclick="openDonationPage()">Donate Now</button>
+        <p>Your contribution makes a positive impact on our mission to ensure clean water access for all. We appreciate your generosity.</p>
+    </div>
+
+    <div class="why-donate-box">
+        <h2>Why Donate?</h2>
+        <h4>Drop by Drop, Oceans of Change</h4>
+        <p class="why-donate">
+            Access to clean water is a human right and a vital component of sustainable development, yet Indigenous communities in Canada face alarming water safety issues due to poor infrastructure and quality. Your donation can make a significant impact on addressing this crisis. We proudly partner with <a href="https://waterfirst.ngo/?gclid=CjwKCAiA6byqBhAWEiwAnGCA4JANEh58OgbVekVFPA0kiun-aNie5Zi9EHYucrtf2Txr7VCCuMr4uBoCDbYQAvD_BwE" target="_blank" rel="noopener noreferrer">Water First</a>, a local NGO dedicated to improving water access and quality in Indigenous communities globally. By supporting Water First, you contribute to building sustainable infrastructure and educational programs, empowering communities and safeguarding their water resources. Help bridge the gap in water safety for Indigenous populations; your contribution is an investment in the health and well-being of communities that need it most. Together, let's ensure that clean water is a reality for all, fulfilling the promise of sustainable development and upholding the basic human right to water.
+        </p>
+    </div>
+
+    <section class="thank-you">
+        <h2>Thank You for Your Support!</h2>
+        <p>Your contribution makes a positive impact on our mission to ensure clean water access for all. We appreciate your generosity.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Clear Currents. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openDonationPage() {
+            window.location.href = "https://waterfirst.ngo/donate/";
+        }
+
+        function goToHomePage() {
+            window.location.href = "home.html";
+        }
+
+        function goToLearnMorePage() {
+            window.location.href = "learnmore.html";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

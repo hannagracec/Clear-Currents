@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Currents</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 100;
+            font-size: 30px;
+            background-color: #35AFC3;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #35AFC3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+              color: #267c8e; 
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            color: #333;
+        }
+
+        .quote-text-container {
+            max-width: 600px; 
+            margin: 0 auto;
+        }
+
+        .quote-banner {
+            font-family: 'Poppins', sans-serif;  
+            font-weight: 800;
+            background: linear-gradient(to bottom, #89D3EB, #35AFC3);
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us-section {
+            font-family: 'Poppins', sans-serif;  
+            font-display: swap;
+            background-color: #fff;
+            color: #000000;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us-text-container {
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .game-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .play-game-button {
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background-color: #35AFC3;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .play-game-button:hover {
+           background-color: #267c8e; 
+        }
+
+        .counters-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .link-counter,
+        .money-donated {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .link-counter h3,
+        .money-donated h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+            color: #35AFC3;
+        }
+
+        .link-counter p,
+        .money-donated p {
+            margin-bottom: 0;
+        }
+
+        .vision-container {
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+
+        .vision-banner {
+            font-family: 'Poppins', sans-serif; 
+            background-color: #fff;
+            color: #000000;
+            padding: 10px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #35AFC3;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            border-top: 1px solid #fff;
+        }
+
+        .donate-button {
+            background-color: #35AFC3;
+            color
+  
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="siteTitle">Clear Currents</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="learnmore.html">Learn More</a> <!-- Updated link -->
+        <a href="donate.html">Donations</a>
+    </nav>
+
+    <section>
+        <div class="quote-banner">
+            <div class="quote-text-container">
+              <h2>Did You Know?</h2>
+              <p>Indigeneous communities are 90 times more likely to have no access to running water compared to non-Indigenous communities in Canada.</p>
+            </div>
+        </div>
+
+        <div class="about-us-section">
+            <div class="about-us-text-container">
+              <h2>About Us</h2>
+              <p><center>Clear Currents aspires to be at the forefront of addressing Canada’s water crisis, pioneering a transformative mission that integrates education, media, and sustainability. We utilize interactive media by donating 1$ for every engagement our mini-games receive towards supporting sustainable water solutions. Before we can say we are working towards a sustainable world we must have a sustainable and livable community here in Canada.</center></p>
+            </div>
+        </div>
+
+        <div class="button-container">
+          <div class="game-container">
+              <img src="Rain Catcher.png" alt="Game 1" style="width: 100%; height: auto;">
+              <button class="play-game-button" onclick="trackLink('index.html', 'game1')">Play Game</button>
+          </div>
+          <div class="game-container">
+              <img src="AquaCraft.png" alt="Game 2" style="width: 100%; height: auto;">
+              <button class="play-game-button" onclick="trackLink('game22.html', 'game2')">Play Game</button>
+          </div>
+      </div>
+
+        <div class="counters-container">
+            <div class="link-counter">
+                <h3>Rain Catcher Play Count</h3>
+                <p><span id="link1Count">0</span> times</p>
+            </div>
+
+            <div class="link-counter">
+                <h3>AquaCraft Play Count</h3>
+                <p><span id="link2Count">0</span> times</p>
+            </div>
+        </div>
+
+        <div class="money-donated" id="moneyDonated">
+            <h3>Money Donated</h3>
+            <p>Total Amount: $<span id="totalAmount">0</span></p>
+        </div>
+    </section>
+
+    <div class="vision-banner">
+        <div class ="vision-container">
+          <h2>Our Vision</h2>
+          <p>Clear Currents’ overarching goal is to secure a future where access to clean water is not only a basic right but a shared reality for all Canadians. Furthermore, we hope to transcend borders and make this an international goal as well. Support us through this journey by donating or engaging with our interactive platform.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Clear Currents. All rights reserved.</p>
+    </footer>
+
+    <script>
+      var link1Count = 0;
+      var link2Count = 0;
+      var totalAmount = 0;
+  
+      function trackLink(destination, gameName) {
+        if (gameName === 'game1') {
+            link1Count++;
+            document.getElementById('link1Count').innerText = link1Count;
+        } else if (gameName === 'game2') {
+            link2Count++;
+            document.getElementById('link2Count').innerText = link2Count;
+        }
+
+        // Increment donation by $1 for each link click
+        totalAmount += 1;
+        document.getElementById('totalAmount').innerText = totalAmount.toFixed(2);
+
+        // Navigate to the destination page
+        window.open(destination, '_blank');
+    }
+  
+      function donate() {
+          // Increment donation by $1 each time donate is called
+          totalAmount += 1;
+          document.getElementById('totalAmount').innerText = totalAmount.toFixed(2);
+      }
+    </script>
+    
+    <style>
+      h1 {
+          margin: 0;
+      }
+
+      .button-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+
+      .game-container {
+          text-align: center;
+          margin: 20px;
+      }
+
+      .play-game-button {
+          /* Your existing button styles */
+          width: 100%; /* Full width */
+      }
+  </style>
+</body>
+</html>

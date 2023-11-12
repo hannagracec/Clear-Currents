@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raincatcher Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("C:/Users/hanna/Downloads/sky.jpg"); /* Specify the path to your image */
+            background-size: cover; /* Adjust the image size to cover the element */
+        }
+
+        #catcher {
+            position: absolute;
+            bottom: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .raindrop {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+        .bad-raindrop {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+
+        }
+
+        #score {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        #timer {
+            position: fixed;
+            top: 40px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        #end-score {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: #fff;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <div id="end-score">Your Score: <span id="finalScore">0</span></div>
+    <div id="score">Score: <span id="scoreCount">0</span></div>
+    <div id="timer">Time: <span id="timerCount">60s</span></div>
+    <script src="game.js"></script>
+</body>
+</html>

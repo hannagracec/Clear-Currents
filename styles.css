@@ -1,0 +1,50 @@
+#catcher {
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    background-image: url("C:/Users/hanna/Downloads/bucket1.png"); /* Specify the path to your image */
+    background-size: cover; /* Adjust the image size to cover the element */
+}
+
+.raindrop, .bad-raindrop {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+
+.raindrop {
+    background-image: url("C:/Users/hanna/Downloads/water.png"); /* Specify the path to your image */
+    background-size: cover; /* Adjust the image size to cover the element */
+}
+
+.bad-raindrop {
+    background-image: url("C:/Users/hanna/Downloads/badwater.png"); /* Specify the path to your image */
+    background-size: cover; /*Adjust the image size to cover the element */
+}
+
+#score, #timer {
+    position: fixed;
+    font-size: 24px;
+    color: #fff;
+}
+
+#score {
+    top: 10px;
+    right: 10px;
+}
+
+#timer {
+    top: 40px;
+    right: 10px;
+}
+
+#end-score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+    display: none; /* Initially hidden */
+}
