@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     catcher.id = "catcher";
     gameContainer.appendChild(catcher);
 
-    const scoreCount = document.getElementById("scoreCount"); // Get the existing span element
+    const scoreCount = document.getElementById("scoreCount"); 
     const timerDisplay = document.getElementById("timer");
 
     let score = 0;
-    let timeLeft = 60; // Set the initial time to 60 seconds
+    let timeLeft = 60; 
 
     function createRaindrop() {
         const raindrop = document.createElement("div");
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function checkBadRaindropCollision() {
         const badRaindrops = document.getElementsByClassName("bad-raindrop");
-        let collisionDetected = false;  // Flag to track if a collision occurred
+        let collisionDetected = false; 
 
         for (let i = 0; i < badRaindrops.length; i++) {
             const badRaindrop = badRaindrops[i];
@@ -90,24 +90,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 badRaindropRect.right <= catcherRect.right
             ) {
                 gameContainer.removeChild(badRaindrop);
-                collisionDetected = true;  // Set the flag to true
+                collisionDetected = true;  
         }
     }
 
     if (collisionDetected) {
-        decrementScore();  // Decrement score outside the loop if a collision occurred
+        decrementScore();  
     } 
 }   
 
     function incrementScore() {
         score++;
-        scoreCount.textContent = score; // Update the existing span element
+        scoreCount.textContent = score; 
     }
 
     function decrementScore() {
         if (score > 0) {
             score--;
-            scoreCount.textContent = score; // Update the existing span element
+            scoreCount.textContent = score;
         }
     }
 
